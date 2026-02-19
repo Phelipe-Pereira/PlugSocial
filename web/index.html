@@ -1,231 +1,293 @@
 <!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Plug Social | Início</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plug Social | Início</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="./index.html"
+        >
+          <span class="brand-badge" aria-label="Plug Social">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M9 7v5a3 3 0 0 0 6 0V7" />
+              <path d="M12 15v5" />
+              <path d="M7 7h10" />
+              <path d="M9 3v4" />
+              <path d="M15 3v4" />
+            </svg>
+          </span>
+          <span class="fw-bold">Plug Social</span>
+        </a>
 
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
-      <span class="brand-badge" aria-label="Plug Social">
-        <!--SVG para poder colocar a "tomada" -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M9 7v5a3 3 0 0 0 6 0V7"/>
-          <path d="M12 15v5"/>
-          <path d="M7 7h10"/>
-          <path d="M9 3v4"/>
-          <path d="M15 3v4"/>
-        </svg>
-      </span>
-      <span class="fw-bold">Plug Social</span>
-    </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/acesso.html">Acesso</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/alfabetizacao.html"
+                >Alfabetização</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/iniciativas.html"
+                >Iniciativas</a
+              >
+            </li>
 
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-        <li class="nav-item"><a class="nav-link active" href="./index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="./pages/acesso.html">Acesso</a></li>
-        <li class="nav-item"><a class="nav-link" href="./pages/alfabetizacao.html">Alfabetização</a></li>
-        <li class="nav-item"><a class="nav-link" href="./pages/iniciativas.html">Iniciativas</a></li>
+            <li class="nav-item" data-auth="out">
+              <a class="btn btn-primary px-3" href="./pages/login.html"
+                >Entrar</a
+              >
+            </li>
+            <li class="nav-item d-none" data-auth="in">
+              <a class="btn btn-success px-3" href="#" data-action="logout"
+                >Sair</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <li class="nav-item" data-auth="out"><a class="btn btn-primary px-3" href="./pages/login.html">Entrar</a></li>
-        <li class="nav-item d-none" data-auth="in">
-          <a class="btn btn-success px-3" href="#" data-action="logout">Sair</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <header class="hero">
+      <div class="container">
+        <div class="card hero-card">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-12 col-lg-7">
+              <div class="hero-left h-100">
+                <span class="tag mb-3">Inclusão Digital</span>
+                <h1 class="hero-title mb-3">
+                  O digital só é avanço quando todo mundo consegue acompanhar
+                </h1>
+                <p class="hero-sub mb-0">
+                  Em uma sociedade cada vez mais conectada, a inclusão digital
+                  deixa de ser um tema “técnico” e se torna um tema social.
+                  Acesso à internet, dispositivos e formação digital são o que
+                  permite que as oportunidades do mundo online sejam, de fato,
+                  oportunidades para todos.
+                </p>
 
-<header class="hero">
-  <div class="container">
-    <div class="card hero-card">
-      <div class="row g-0 align-items-stretch">
-        <div class="col-12 col-lg-7">
-          <div class="hero-left h-100">
-            <span class="tag mb-3">Inclusão Digital</span>
-            <h1 class="hero-title mb-3">O digital só é avanço quando todo mundo consegue acompanhar</h1>
-            <p class="hero-sub mb-0">
-              Em uma sociedade cada vez mais conectada, a inclusão digital deixa de ser um tema “técnico”
-              e se torna um tema social. Acesso à internet, dispositivos e formação digital são o que permite
-              que as oportunidades do mundo online sejam, de fato, oportunidades para todos.
-            </p>
+                <div class="mt-4 d-flex flex-column flex-sm-row gap-2">
+                  <a
+                    class="btn btn-primary px-4 py-2"
+                    href="./pages/acesso.html"
+                    >Começar pelo acesso</a
+                  >
+                  <a
+                    class="btn btn-outline-primary px-4 py-2"
+                    href="./pages/alfabetizacao.html"
+                    >Ver alfabetização digital</a
+                  >
+                </div>
+              </div>
+            </div>
 
-            <div class="mt-4 d-flex flex-column flex-sm-row gap-2">
-              <a class="btn btn-primary px-4 py-2" href="./pages/acesso.html">Começar pelo acesso</a>
-              <a class="btn btn-outline-primary px-4 py-2" href="./pages/alfabetizacao.html">Ver alfabetização digital</a>
+            <div class="col-12 col-lg-5 p-4 p-lg-5 bg-white">
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span class="tag">Painel</span>
+                <span class="small-muted">status</span>
+              </div>
+
+              <div class="card card-soft">
+                <div class="card-body p-4">
+                  <div class="fw-bold">
+                    Olá, <span data-user-name>Visitante</span>
+                  </div>
+                  <p class="small-muted mt-2 mb-3">
+                    Algumas áreas do site exigem login para acesso — como a
+                    página de Iniciativas.
+                  </p>
+                  <div class="d-grid gap-2">
+                    <a
+                      class="btn btn-primary"
+                      href="./pages/login.html"
+                      data-auth="out"
+                      >Entrar</a
+                    >
+                    <a
+                      class="btn btn-outline-primary"
+                      href="./pages/cadastro.html"
+                      data-auth="out"
+                      >Criar conta</a
+                    >
+                    <a
+                      class="btn btn-success d-none"
+                      href="./pages/iniciativas.html"
+                      data-auth="in"
+                      >Acessar Iniciativas</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <hr class="soft" />
+              <div class="small-muted"></div>
             </div>
           </div>
         </div>
+      </div>
+    </header>
 
-        <div class="col-12 col-lg-5 p-4 p-lg-5 bg-white">
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <span class="tag">Painel</span>
-            <span class="small-muted">status</span>
-          </div>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12 col-lg-4">
+              <div class="card card-soft h-100">
+                <div class="card-body p-4">
+                  <span class="tag mb-3">1. Acesso</span>
+                  <h2 class="section-title h4">Conexão e dispositivos</h2>
+                  <p class="small-muted mb-0">
+                    Sem internet de qualidade e equipamentos adequados, a
+                    participação digital vira limitada, intermitente e desigual.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          <div class="card card-soft">
-            <div class="card-body p-4">
-              <div class="fw-bold">Olá, <span data-user-name>Visitante</span></div>
-              <p class="small-muted mt-2 mb-3">
-                Algumas áreas do site exigem login para acesso — como a página de Iniciativas.
-              </p>
-              <div class="d-grid gap-2">
-                <a class="btn btn-primary" href="./pages/login.html" data-auth="out">Entrar</a>
-                <a class="btn btn-outline-primary" href="./pages/cadastro.html" data-auth="out">Criar conta</a>
-                <a class="btn btn-success d-none" href="./pages/iniciativas.html" data-auth="in">Acessar Iniciativas</a>
+            <div class="col-12 col-lg-4">
+              <div class="card card-soft h-100">
+                <div class="card-body p-4">
+                  <span class="tag mb-3">2. Alfabetização</span>
+                  <h2 class="section-title h4">Uso com autonomia</h2>
+                  <p class="small-muted mb-0">
+                    Saber usar tecnologia vai além de “mexer no celular”. É
+                    navegar com segurança, interpretar informações e usar
+                    ferramentas digitais com propósito.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="card card-soft h-100">
+                <div class="card-body p-4">
+                  <span class="tag mb-3">3. Iniciativas</span>
+                  <h2 class="section-title h4">Ações que reduzem barreiras</h2>
+                  <p class="small-muted mb-0">
+                    Programas, formação comunitária e espaços públicos
+                    conectados ajudam a transformar acesso em oportunidade.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          <hr class="soft">
+          <div class="row g-4 mt-1 align-items-stretch">
+            <div class="col-12 col-lg-7">
+              <div class="card card-soft h-100">
+                <div class="card-body p-4 p-md-5">
+                  <span class="tag mb-2">Multimídia</span>
+                  <h2 class="section-title h4">Vídeo de apoio</h2>
+                  <p class="small-muted">
+                    Um resumo visual ajuda a contextualizar por que inclusão
+                    digital envolve acesso, formação e continuidade.
+                  </p>
 
-          <div class="small-muted">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="section">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-lg-4">
-          <div class="card card-soft h-100">
-            <div class="card-body p-4">
-              <span class="tag mb-3">1. Acesso</span>
-              <h2 class="section-title h4">Conexão e dispositivos</h2>
-              <p class="small-muted mb-0">
-                Sem internet de qualidade e equipamentos adequados, a participação digital vira limitada,
-                intermitente e desigual.
-              </p>
+                  <div class="video-wrap ratio ratio-16x9">
+                    <iframe
+                      src="https://www.youtube.com/embed/Nt6DWIF5rmc?si=WYziVazT2CWiS12x"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share;
+                      "
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="col-12 col-lg-4">
-          <div class="card card-soft h-100">
-            <div class="card-body p-4">
-              <span class="tag mb-3">2. Alfabetização</span>
-              <h2 class="section-title h4">Uso com autonomia</h2>
-              <p class="small-muted mb-0">
-                Saber usar tecnologia vai além de “mexer no celular”. É navegar com segurança,
-                interpretar informações e usar ferramentas digitais com propósito.
-              </p>
-            </div>
-          </div>
-        </div>
+            <div class="col-12 col-lg-5">
+              <div class="card card-soft h-100">
+                <div class="card-body p-4 p-md-5">
+                  <span class="tag mb-2">Referências</span>
+                  <h2 class="section-title h4">Fontes utilizadas</h2>
+                  <p class="small-muted">
+                    O conteúdo do site foi escrito no estilo e na abordagem das
+                    fontes abaixo, com foco social e educacional.
+                  </p>
 
-        <div class="col-12 col-lg-4">
-          <div class="card card-soft h-100">
-            <div class="card-body p-4">
-              <span class="tag mb-3">3. Iniciativas</span>
-              <h2 class="section-title h4">Ações que reduzem barreiras</h2>
-              <p class="small-muted mb-0">
-                Programas, formação comunitária e espaços públicos conectados ajudam a transformar acesso em oportunidade.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+                  <ul class="small-muted mb-0">
+                    <li>
+                      PUCRS Online — Inclusão digital e mobilidade social.
+                    </li>
+                    <li>
+                      UFSM (PET Sistemas de Informação) — Inclusão digital e
+                      redução das barreiras tecnológicas.
+                    </li>
+                    <li>
+                      Artigo acadêmico (PDF enviado) — base teórica
+                      complementar.
+                    </li>
+                  </ul>
 
-      <div class="row g-4 mt-1 align-items-stretch">
-        <div class="col-12 col-lg-7">
-          <div class="card card-soft h-100">
-            <div class="card-body p-4 p-md-5">
-              <span class="tag mb-2">Multimídia</span>
-              <h2 class="section-title h4">Vídeo de apoio</h2>
-              <p class="small-muted">
-                Um resumo visual ajuda a contextualizar por que inclusão digital envolve acesso, formação e continuidade.
-              </p>
-
-              <div class="video-wrap ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/Nt6DWIF5rmc?si=WYziVazT2CWiS12x"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <hr class="soft" />
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="col-12 col-lg-5">
-          <div class="card card-soft h-100">
-            <div class="card-body p-4 p-md-5">
-              <span class="tag mb-2">Referências</span>
-              <h2 class="section-title h4">Fontes utilizadas</h2>
-              <p class="small-muted">
-                O conteúdo do site foi escrito no estilo e na abordagem das fontes abaixo, com foco social e educacional.
-              </p>
-
-              <ul class="small-muted mb-0">
-                <li>PUCRS Online — Inclusão digital e mobilidade social.</li>
-                <li>UFSM (PET Sistemas de Informação) — Inclusão digital e redução das barreiras tecnológicas.</li>
-                <li>Artigo acadêmico (PDF enviado) — base teórica complementar.</li>
-              </ul>
-
-              <hr class="soft">
-            </div>
-          </div>
+    <footer class="footer">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between gap-2"
+        >
+          <div>© 2026 • Plug Social</div>
+          <div class="small-muted">Bootstrap 5 • HTML/CSS/JS</div>
         </div>
-
       </div>
+    </footer>
 
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
-      <div>© 2026 • Plug Social</div>
-      <div class="small-muted">Bootstrap 5 • HTML/CSS/JS</div>
-    </div>
-  </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script type="module">
-  import { seedDefaultUser, fillUserUI, logoutUser, getSession } from "./javascript/auth.js";
-
-  seedDefaultUser();
-
-  fillUserUI();
-  const session = getSession();
-  const isLoggedIn = Boolean(session);
-
-  const visibleWhenLoggedIn = document.querySelectorAll("[data-auth='in']");
-  visibleWhenLoggedIn.forEach(element => {
-    element.classList.toggle("d-none", !isLoggedIn);
-  });
-
-  const visibleWhenLoggedOut = document.querySelectorAll("[data-auth='out']");
-  visibleWhenLoggedOut.forEach(element => {
-    element.classList.toggle("d-none", isLoggedIn);
-  });
-
-  const logoutButtons = document.querySelectorAll("[data-action='logout']");
-  logoutButtons.forEach(button => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      logoutUser();
-      window.location.href = "./pages/login.html";
-    });
-  });
-</script>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./javascript/main.js"></script>
+  </body>
 </html>
