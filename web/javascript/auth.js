@@ -6,12 +6,14 @@ const SESSION_KEY = "id.session.v1";
 function getUsers() {
   const raw = localStorage.getItem(USERS_KEY);
   if (!raw) return [];
+
   try {
     return JSON.parse(raw);
   } catch {
     return [];
   }
 }
+
 function saveUsers(users) {
   localStorage.setItem(USERS_KEY, JSON.stringify(users));
 }
@@ -25,6 +27,7 @@ export function seedDefaultUser() {
     email: "aluno@exemplo.com",
     password: "Aluno1234",
   });
+
   saveUsers(users);
 }
 
@@ -37,6 +40,7 @@ export function registerUser({ name, email, password, confirmPassword }) {
   if (cleanName.length < 3) {
     return { ok: false, message: "Informe seu nome (mín. 3 caracteres)." };
   }
+
   if (!isValidEmail(cleanEmail)) {
     return {
       ok: false,
@@ -70,6 +74,7 @@ export function registerUser({ name, email, password, confirmPassword }) {
 
   users.push({ name: cleanName, email: cleanEmail, password });
   saveUsers(users);
+
   return { ok: true, message: "Cadastro concluído! Agora você pode entrar." };
 }
 
@@ -110,6 +115,7 @@ export function logoutUser() {
 export function getSession() {
   const raw = sessionStorage.getItem(SESSION_KEY);
   if (!raw) return null;
+
   try {
     return JSON.parse(raw);
   } catch {
@@ -117,22 +123,45 @@ export function getSession() {
   }
 }
 
-export function requireAuth() {
-  const session = getSession();
-  if (!session) {
-    window.location.href = "./login.html";
-    return false;
-  }
-  return true;
-}
-
 export function fillUserUI() {
   const session = getSession();
   const userNameElement = document.querySelector("[data-user-name]");
+
   if (userNameElement) {
     userNameElement.textContent = session?.name || "Visitante";
   }
 }
 
-const session = getSession();
-const isLoggedIn = Boolean(session);
+export function updateAuthUI() {
+  const session = getSession();
+  const isLoggedIn = Boolean(session);
+
+  document.querySelectorAll("[data-auth='in']").forEach((el) => {
+    el.classList.toggle("d-none", !isLoggedIn);
+  });
+
+  document.querySelectorAll("[data-auth='out']").forEach((el) => {
+    el.classList.toggle("d-none", isLoggedIn);
+  });
+}
+
+export function bindLogoutButtons({ redirectTo } = {}) {
+  const to = redirectTo || "./pages/login.html";
+
+  document.querySelectorAll("[data-action='logout']").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      logoutUser();
+      window.location.href = to;
+    });
+  });
+}
+
+export function requireAuth({ redirectTo } = {}) {
+  const session = getSession();
+  if (!session) {
+    window.location.href = redirectTo || "./login.html";
+    return false;
+  }
+  return true;
+}
