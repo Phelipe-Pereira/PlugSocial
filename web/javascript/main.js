@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const session = getSession();
 
-  document.querySelectorAll("[data-auth='in']").forEach(el => {
+  document.querySelectorAll("[data-auth='in']").forEach((el) => {
     el.classList.toggle("d-none", !session);
   });
 
-  document.querySelectorAll("[data-auth='out']").forEach(el => {
+  document.querySelectorAll("[data-auth='out']").forEach((el) => {
     el.classList.toggle("d-none", !!session);
   });
 
-  document.querySelectorAll("[data-action='logout']").forEach(btn => {
+  document.querySelectorAll("[data-action='logout']").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       logoutUser();

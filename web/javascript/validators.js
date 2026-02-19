@@ -1,5 +1,7 @@
 export function isValidEmail(email) {
-  const value = String(email || "").trim().toLowerCase();
+  const value = String(email || "")
+    .trim()
+    .toLowerCase();
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
 }
 
